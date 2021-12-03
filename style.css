@@ -1,0 +1,165 @@
+/*
+
+-
+-
+- Global
+-
+-
+
+*/
+
+body {
+    background-color: #F2EAE4;
+    margin: 0;
+}
+
+h1, h2, h3, h4, p, a, b, span, li {
+    color: #303030;
+    font-family: 'Rubik';
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+/*
+-
+-
+- Typescale
+-
+-
+*/
+
+.h1 {
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 120%;
+}
+.h2 {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 120%;
+    margin: 0 0 24px 0;
+}
+.h3 {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 120%;
+    margin: 0 0 16px 0;
+}
+.p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    margin: 0 0 24px 0;
+}
+
+.a {
+    color: #4D61CE;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+@media only screen and (max-width: 480px) {
+    .h1 {
+        font-size: 32px;
+        line-height: 40px;
+    }
+}
+
+/*
+-
+-
+-
+-
+-
+*/
+
+.button {
+    background: #4D61CE;
+    color: white;
+    display: flex;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    padding: 12px 24px;
+    border-radius: 4px;
+    text-align: center;
+    align-items: center;
+    text-decoration: none;
+    vertical-align: middle;
+    justify-content: center;
+    width: -webkit-fit-content;
+    box-shadow: 0 8px 0 0 #394CA9;
+}
+
+.button img {
+    margin-left: 8px;
+}
+
+.button:hover {
+    border-top: 4px solid #F2EAE4;
+    box-shadow: 0 4px 0 0 #394CA9;
+}
+
+
+/*
+-
+-
+- Grid
+-
+-
+*/
+
+.container {
+    max-width: 1032px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.grid-2 {
+    display: grid;
+    grid-gap: 48px;
+    grid-template-columns: calc(50% - 24px) calc(50% - 24px);
+}
+.grid-3 {
+    display: grid;
+    grid-gap: 48px;
+    grid-template-columns: calc(30% - 24px) calc(30% - 24px) calc(30% - 24px);
+}
+.grid-55-45 {
+    display: grid;
+    grid-gap: 48px;
+    grid-template-columns: calc(55% - 24px) calc(45% - 24px);
+}
+
+@media only screen and (max-width: 800px) {
+    .grid-2 {
+        display: block;
+    }
+    .grid-55-45 {
+        display: block;
+    }
+}
+
+/*
+-
+-
+-
+-
+-
+*/
+
+.icon {
+    width: 24px;
+    height: 24px;
+}
+.callout {
+    margin-bottom: 56px;
+}
+.callout .icon {
+    margin-bottom: 8px;
+}
