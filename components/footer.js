@@ -138,7 +138,8 @@ footerTemplate.innerHTML = `
             footer #privacy-links {
                 text-align: left;
             }
-            footer #privacy-links a {
+            footer #privacy-links a,
+            footer #privacy-links span {
                 margin-left: 0;
                 display: block;
                 margin-bottom: 24px;
