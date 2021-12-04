@@ -55,12 +55,11 @@ headerTemplate.innerHTML = `
           margin: 0 48px 0 0;
       }
 
-      .topnav .icon {
-          display: none;
-      }
-
       @media screen and (max-width: 600px) {
-          .topnav a:not(:first-child) {display: none;}
+          .topnav a:not(:first-child) {
+              display: inline-block;
+              width: 24%;
+          }
           .topnav a.icon {
               float: none;
               display: block;
@@ -68,9 +67,15 @@ headerTemplate.innerHTML = `
               top: 0;
               right: 0;
           }
+          header a:nth-child(1) {
+              margin: 0;
+          }
           header a {
               margin: 0;
               float: none;
+          }
+          header .topnav {
+              margin: 16px 16px 0 16px;
           }
       }
 
@@ -94,36 +99,29 @@ headerTemplate.innerHTML = `
   </style>
   <header>
       <div id="myTopnav" class="topnav">
-          <a href=""><img class="logotype" src="./assets/logo-still-dark.gif" /></a>
+          <a href="./"><img class="logotype" src="./assets/logo-still-dark.gif" /></a>
           <a id="hh" href="/about">About</a>
           <a href="/frequently-asked-questions">FAQ</a>
           <a href="/shop">Shop</a>
           <a href="/contact">Contact</a>
-          <a href="javascript:void(0);" class="icon" onclick="myFunction()"><img class="menu" src="./assets/menu.svg" /></a>
       </div>
   </header>
-  <script>
-      function myFunction() {
-          var x = document.getElementById("myTopnav");
-          if (x.className === "topnav") {
-              x.className += " responsive";
-          } else {
-              x.className = "topnav";
-          }
-      }
-  </script>
+
 `;
 
 class Header extends HTMLElement {
   constructor() {
       super();
-  }
 
+  }
   connectedCallback() {
-    const shadowRoot = this.attachShadow({ mode: 'closed' });
+    const shadowRoot = this.attachShadow({ mode: 'open' });
 
     shadowRoot.appendChild(headerTemplate.content);
   }
+
 }
+
+
 
 customElements.define('header-component', Header);
